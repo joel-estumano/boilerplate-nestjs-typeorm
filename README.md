@@ -18,7 +18,7 @@ Sinta-se à vontade para enviar sugestões, melhorias ou perguntas! 🚀
 
 ### 📌 Introdução
 
-Este projeto foi criado para exemplificar a implementação de APIs REST, oferecendo uma estrutura pronta para CRUD de empresas e produtos, com integração a banco de dados, validação de dados e documentação automatizada.
+Este projeto foi criado para a implementação de APIs REST, oferecendo uma estrutura pronta para CRUD de empresas e produtos, com integração a banco de dados, validação de dados e documentação automatizada.
 Empresas podem ser cadastradas com informações como nome e logo, enquanto produtos são vinculados a empresas específicas, garantindo um relacionamento claro entre essas entidades.
 
 ### 🏢 Gerenciamento de Empresas e Produtos
@@ -40,6 +40,21 @@ Essa abordagem melhora a integridade dos dados e facilita a escalabilidade da ap
 - NestJS → Framework TypeScript para construção de APIs.
 - [TypeORM](https://docs.nestjs.com/recipes/sql-typeorm) → ORM para interação com o banco de dados MySQL.
 - [Swagger](https://docs.nestjs.com/openapi/introduction) → Documentação da API integrada para facilitar testes.
+
+#### 🔧 Configurações Adicionais
+
+Além das tecnologias principais, este projeto já inclui configurações essenciais para garantir qualidade e padronização do código:
+✅ Padronização de Código
+
+- Prettier → Formatação automática do código para um estilo consistente.
+- ESLint → Linter para identificar e corrigir problemas no código.
+  🔍 Validação Antes do Commit
+- Husky → Configurado para executar validações antes do commit, garantindo que o código siga os padrões definidos.
+- Testes Automáticos → Rodados no pre-commit para evitar a entrada de código não validado no repositório.
+
+🔄 Processo de CI
+
+- Para automatizar verificações no código e garantir qualidade contínua, este projeto inclui um pipeline de CI pronto para integração.
 
 ### 📖 Documentação da API
 
