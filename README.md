@@ -12,9 +12,7 @@
 
 ### ✍️ Autor
 
-Este projeto foi desenvolvido por Joel Estumano.
-
-Contato: [joelestumano.com](https://www.joelestumano.com/)
+Este projeto foi desenvolvido por [Joel Estumano](https://www.joelestumano.com/).
 
 Sinta-se à vontade para enviar sugestões, melhorias ou perguntas! 🚀
 
@@ -34,14 +32,14 @@ Essa abordagem melhora a integridade dos dados e facilita a escalabilidade da ap
 ✅ Construir uma base sólida para projetos NestJS, seguindo boas práticas de desenvolvimento.
 ✅ Oferecer um projeto pronto para escalabilidade, com uma arquitetura organizada e modular.
 ✅ Implementar um exemplo funcional, incluindo operações CRUD (Create, Read, Update, Delete) para empresas e produtos.
+
 ✅ Providenciar uma infraestrutura inicial preparada para produção, integrando banco de dados, autenticação e documentação via Swagger.
 
 🛠️ Tecnologias Utilizadas
 
 - NestJS → Framework TypeScript para construção de APIs.
-- TypeORM → ORM para interação com o banco de dados MySQL.
-- Docker → Ambientes de desenvolvimento e produção padronizados.
-- Swagger → Documentação da API integrada para facilitar testes.
+- [TypeORM](https://docs.nestjs.com/recipes/sql-typeorm) → ORM para interação com o banco de dados MySQL.
+- [Swagger](https://docs.nestjs.com/openapi/introduction) → Documentação da API integrada para facilitar testes.
 
 ### 📖 Documentação da API
 
@@ -66,7 +64,7 @@ http://localhost:3000/swagger-json
 ✔️ Possibilita testar requisições diretamente no navegador.
 ✔️ Facilita a integração com outras aplicações e ferramentas
 
-![Figma](https://joel-estumano.github.io/public/img/apps/boilerplate-nestjs-typeorm_swagger.png)
+![Figma](https://joel-estumano.github.io/public/img/apps/boilerplate-nestjs-typeorm-swagger.png)
 
 ### 🚀 Instalação e Configuração
 
@@ -87,8 +85,8 @@ Em seguida, edite o arquivo `.env.local` e configure os valores corretos para co
 ### 🔥 Executando o projeto
 
 O projeto pode ser rodado localmente ou dentro de um container Docker.
-✅ Rodando localmente
-Caso prefira rodar sem Docker, instale as dependências e inicie o servidor:
+
+✅ Para rodar localmente instale as dependências e inicie o servidor:
 
 ```
 npm install
@@ -100,17 +98,51 @@ npm run start:dev
 
 Isso iniciará a API NestJS para desenvolvimento.
 
-🐳 Rodando com Docker
+```
+http://localhost:3000
+```
 
-Certifique-se de que você tem:
-
-- Docker instalado [Informações e download aqui](https://www.docker.com/get-started/).
-- Docker Compose configurado corretamente.
-
-Caso queira usar Docker, basta rodar:
+🐳 Caso queira usar Docker, basta rodar:
 
 ```
 docker-compose up --build -d
 ```
 
+Certifique-se de que você tem:
+
+- [Docker](https://www.docker.com/get-started/) instalado.
+- Docker Compose configurado corretamente.
+
 Isso iniciará a API NestJS junto com o banco MySQL dentro de containers.
+
+### ✍️ Criando um novo recurso
+
+- Instalar o [NestJS CLI](https://docs.nestjs.com/cli/overview) (caso ainda não tenha)
+  Se ainda não tiver o CLI do NestJS instalado globalmente, execute:
+
+```
+npm install -g @nestjs/cli
+```
+
+- Localize o diretório `modules` (src/modules) e execute o comando abaixo para gerar o recurso:
+
+```
+nest g resource modules/nome-do-recurso
+```
+
+⚠️ Substitua `nome-do-recurso` pelo nome do recurso que deseja criar. ⚠️
+
+Seu novo recurso estrá disponível.
+
+```
+modules/
+├── nome-do-recurso/
+│   ├── dto/
+│   │   ├── create-nome-do-recurso.dto.ts
+│   │   ├── update-nome-do-recurso.dto.ts
+│   ├── entities/
+│   │   ├── nome-do-recurso.entity.ts
+│   ├── nome-do-recurso.controller.ts
+│   ├── nome-do-recurso.module.ts
+│   ├── nome-do-recurso.service.ts
+```
