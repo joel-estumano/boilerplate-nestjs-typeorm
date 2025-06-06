@@ -93,9 +93,8 @@ git clone https://github.com/joel-estumano/boilerplate-nestjs-typeorm.git
 ```
 
 📌 2. Configurar variáveis de ambiente
-Copie o arquivo de exemplo `.env` para criar um ambiente local: `.env.local
-`
-Em seguida, edite o arquivo `.env.local` e configure os valores corretos para conexão ao banco de dados.
+Copie o arquivo de exemplo `.env.example` para criar um ambiente local: `.env`
+`Em seguida, edite o arquivo`.env` e configure os valores corretos para conexão ao banco de dados.
 
 ### 🔥 Executando o projeto
 

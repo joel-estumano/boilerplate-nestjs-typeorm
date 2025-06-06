@@ -32,7 +32,7 @@ const databaseProviders = [
 @Module({
     imports: [
         ConfigModule.forRoot({
-            envFilePath: ['.env.local'],
+            envFilePath: ['.env'],
             isGlobal: true,
             load: [databaseConfig],
         }),
